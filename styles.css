@@ -1,0 +1,411 @@
+/* Global Styles */
+body {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff2e1;
+    color: #003864;
+    text-align: center;
+}
+
+/* Navbar */
+nav {
+    background-color: #ffcb52; /* Warna kuning */
+    padding: 10px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between; /* Membuat jarak antara logo dan menu */
+    align-items: center; /* Menjaga logo dan menu tetap sejajar */
+}
+
+/* Logo atau Judul IOTA Center (di kiri) */
+nav .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #003864; /* Warna biru gelap */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+/* Menu Navbar */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Mengatur menu menjadi horizontal */
+}
+
+nav ul li {
+    margin-left: 30px; /* Memberikan jarak antar menu */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #003864; /* Warna teks biru gelap */
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 5px;
+}
+
+/* Hover Effect pada Link */
+nav ul li a:hover {
+    color: #fff; /* Warna teks putih saat hover */
+    background-color: #003864; /* Warna biru gelap saat hover */
+}
+
+/* Responsif untuk Mobile */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Menyusun navbar secara vertikal pada layar kecil */
+        align-items: flex-start;
+    }
+
+    nav .logo {
+        font-size: 1.4rem;
+        margin-bottom: 15px; /* Menambahkan jarak antara logo dan menu pada mobile */
+    }
+
+    nav ul {
+        width: 100%;
+        flex-direction: column; /* Mengatur menu menjadi vertikal */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px; /* Menambahkan jarak antar item menu pada mobile */
+    }
+
+    nav ul li a {
+        font-size: 1.4rem;
+        padding: 8px 20px;
+    }
+}
+
+/* Hero Section */
+.hero {
+    background: url('background.png') no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-buttons .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffcb52;
+    color: #003864;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 5px;
+}
+
+.hero-buttons .btn:hover {
+    background-color: #003864;
+    color: #ffcb52;
+}
+
+/* Pembatas Section */
+#pembatas {
+    width: 100%;
+    height: 250px; /* Tinggi pembatas sesuai gambar */
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.garis-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* Layanan Section */
+#layanan {
+    padding: 20px;
+    background-color: #fff2e1;
+    text-align: center;
+}
+
+#layanan h2 {
+    font-size: 32px;
+    color: #003864;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    background-color: #ffcb52;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    width: 200px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.service-item:hover {
+    background-color: #003864;
+    color: white;
+}
+
+#service-details {
+    display: none;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #003864;
+    color: #fff2e1;
+    border-radius: 8px; 
+}
+
+.service-details p {
+    font-size: 16px;
+}
+
+.service-details h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Section Author */
+#author {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff2e1;
+}
+
+#author h2 {
+    font-size: 2.5rem;
+    color: #003864;
+    margin-bottom: 10px;
+}
+
+#author p {
+    font-size: 1.2rem;
+    color: #003864;
+    margin-bottom: 30px;
+}
+
+/* Container Card */
+.author-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Grid dengan 4 kolom */
+    gap: 10px; /* Mengurangi jarak antar foto */
+    justify-content: center;
+    padding: 0; /* Menghilangkan padding container */
+}
+
+/* Card Style */
+.author-card {
+    text-align: center;
+    cursor: pointer;
+    margin: 0; /* Menghilangkan margin pada setiap card */
+}
+
+/* Frame for Image */
+.author-frame {
+    width: 150px; /* Ukuran frame di-scale */
+    height: 250px;
+    overflow: hidden;
+    border: 2px solid #003864; /* Border frame */
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 0 auto;
+}
+
+/* Image Style */
+.author-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Pastikan gambar proporsional */
+    transition: transform 0.3s;
+}
+
+/* Nama Author */
+.author-card p {
+    font-size: 1rem;
+    color: #003864;
+    font-weight: bold;
+    margin-top: 5px; /* Jarak antara frame dan nama lebih kecil */
+}
+
+/* Hover Effect */
+.author-card:hover .author-frame {
+    transform: scale(1.1); /* Efek memperbesar frame */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.author-card:hover img {
+    transform: scale(1.1); /* Efek zoom gambar */
+}
+
+.registration-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff2e1;
+    border: 1px solid #003864;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.registration-form .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.registration-form label {
+    display: block;
+    font-weight: bold;
+    color: #003864;
+    margin-bottom: 5px;
+}
+
+.registration-form input,
+.registration-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #003864;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #003864;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.registration-form input:focus,
+.registration-form textarea:focus {
+    border-color: #ffcb52;
+}
+
+.registration-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.registration-form .btn-submit {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    background-color: #ffcb52;
+    color: #003864;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.registration-form .btn-submit:hover {
+    background-color: #003864;
+    color: #ffcb52;
+}
+
+/* Feedback for Form Validation */
+.form-message {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: red; /* Warna merah untuk pesan error */
+    text-align: center;
+    visibility: hidden; /* Tampilkan hanya jika ada pesan */
+}
+
+.form-message.success {
+    color: green; /* Warna hijau untuk pesan sukses */
+    visibility: visible;
+}
+
+.form-message.error {
+    color: red;
+    visibility: visible;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #003864; /* Warna biru gelap untuk footer */
+    color: #fff2e1; /* Warna teks putih */
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.footer-social a {
+    margin: 0 10px;
+}
+
+.social-icon {
+    width: 40px; /* Ukuran ikon sosial media */
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Efek hover untuk memperbesar ikon */
+}
+
+footer p {
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+/* Responsif untuk perangkat mobile */
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo {
+        margin-bottom: 20px;
+    }
+
+    .footer-social {
+        margin-bottom: 20px;
+    }
+}
